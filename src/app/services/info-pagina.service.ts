@@ -9,6 +9,7 @@ export class InfoPaginaService {
 
   info: IInfoPagina = {};
   cargada = false;
+  
 
   constructor(private http: HttpClient) {
 
@@ -17,5 +18,9 @@ export class InfoPaginaService {
         this.info = resp;
     });
 
+   }
+
+   cargaInfo(){
+     return this.http.get("https://angular-html-1b10d.firebaseio.com/equipo.json");
    }
 }
