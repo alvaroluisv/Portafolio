@@ -9,18 +9,13 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class PortafolioComponent implements OnInit {
 
-  productos: productoIdx[] = [];
   cargando = true;
 
-  constructor(private Proservice: ProductosService) { 
+  constructor(public Proservice: ProductosService) { 
 
-    setTimeout(() => {
+    this.Proservice.cargarProductoIdx();
       this.cargando = false;
-    },1000);
-    this.Proservice.cargarProductoIdx().subscribe((data: productoIdx[]) => {
-      this.productos = data;
-      
-  });
+
   }
 
   ngOnInit(): void {

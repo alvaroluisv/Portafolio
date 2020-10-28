@@ -7,6 +7,7 @@ import { DocumentationComponent } from './pages/documentation/documentation.comp
 import { DesingComponent } from './pages/desing/desing.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { SearchComponent } from './pages/search/search.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,10 @@ const routes: Routes = [
     path: 'contact', component: ContactComponent
   },
   {
-    path: 'producto', component: ProductoComponent
+    path: 'item/:id', component: ProductoComponent
+  },
+  {
+    path: 'search/:termino', component: SearchComponent
   },
   {
     path: '**', pathMatch: 'full', redirectTo: 'home'

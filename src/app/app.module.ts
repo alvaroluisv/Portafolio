@@ -13,6 +13,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './pages/search/search.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     DesingComponent,
     ContactComponent,
     AboutComponent,
-    ProductoComponent
+    ProductoComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
