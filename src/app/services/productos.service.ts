@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { productoIdx } from '../interface/productos_idx';
-import { IProducto } from '../interface/productos';
-import { rejects } from 'assert';
-import { resolve } from 'dns';
 
 
 @Injectable({
@@ -46,13 +43,13 @@ export class ProductosService {
       // aplicar filtro
         this.filtrarProductos(termino);
     }
-      this.productosFiltrado = this.productos.filter( producto => {
-        return true;
-      });
+      // this.productosFiltrado = this.productos.filter( producto => {
+      //   return true;
+      // });
   }
 
   filtrarProductos( termino: string){
-      console.log(this.productos);
+      
       this.productosFiltrado = [];
 
       termino = termino.toLowerCase();
